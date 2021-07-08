@@ -40,9 +40,9 @@ const Todo = () => {
     <ul class="list-group m-2">
           {
             todolist.map((todo)=>{
-              return <li class="list-group-item"><button type="button" class="btn btn-dark m-2"><i className="fa fa-trash add-btn"></i>
-              </button> {todo.userInput.userInput}</li>
-            })
+                return <li class="list-group-item"><button type="button" class="btn btn-dark m-2" onClick={()=> dispatch(removeTodo(todo.userInput))}><i className="fa fa-trash add-btn"></i>
+                </button> {todo.userInput.userInput}</li>
+              })
           }
         </ul>
   </div>

@@ -14,9 +14,14 @@ const todoReducers = (state = data, action)=>{
                     }
                 ]
             }
+        case "REMOVETODO": 
+            const newTodolist = state.todolist.filter((todo) => todo.userInput !== action.userInput);
+            return {
+                ...state, 
+                todolist : newTodolist
+            }
         default: return state;
         }
-
     }
 
 export default todoReducers;
