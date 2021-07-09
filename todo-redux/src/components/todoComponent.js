@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useSelector, useDispatch} from "react-redux"
-import { addTodo, removeTodo, modifyTodo } from '../actions/index';
+import { addTodo, removeTodo, modifyTodo } from '../actions';
 
 const Todo = () => {
 
@@ -41,13 +41,13 @@ const Todo = () => {
           {
             todolist.map((todo)=>{
                 return (<li class="list-group-item">
-                    <button type="button" class="btn btn-dark m-2" onClick={()=> dispatch(removeTodo(todo.userInput))}>
+                    <button type="button" class="btn btn-dark m-2" onClick={()=> dispatch(removeTodo(todo))}>
                     <i className="fa fa-trash add-btn"></i>
                     </button> 
-                    <button type="button" class="btn btn-dark m-2" onClick={()=> dispatch(modifyTodo(todo.userInput))}>
+                    <button type="button" class="btn btn-dark m-2" onClick={()=> { dispatch(modifyTodo(todo))}}>
                     <i className="fa fa-edit add-btn"></i>
                     </button> 
-                    {todo.userInput.userInput}</li>)
+                    {todo}</li>)
               })
           }
         </ul>
