@@ -20,8 +20,13 @@ const todoReducers = (state = data, action)=>{
                 ...state, 
                 todolist : newTodolist
             }
+        case "MODIFYTODO": 
+            const filteredList = state.todolist.filter((todo) => todo.userInput === action.userInput);
+            return {
+                todolist : filteredList
+            }
         default: return state;
-        }
+        }  
     }
 
 export default todoReducers;

@@ -14,8 +14,9 @@ export const removeTodo = (userInput) =>{
     }
 }
 
-export const modifyTodo = () =>{
+export const modifyTodo = (userInput) =>{
     return{
-        type: "MODIFYTODO"
+        type: "MODIFYTODO",
+        userInput
     }
 }
