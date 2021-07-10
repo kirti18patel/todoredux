@@ -1,20 +1,20 @@
 export const addTodo = (userInput) =>{
     return{
         type: "ADDTODO",
-        payload: userInput
+        payload: {userInput}
     }
 }
 
-export const removeTodo = (userInput) =>{
+export const removeTodo = (i) =>{
     return{
         type: "REMOVETODO",
-        payload: userInput
+        payload: {i}
     }
 }
 
-export const modifyTodo = (userInput) =>{
+export const modifyTodo = (userInput, i) =>{
     return{
         type: "MODIFYTODO",
-        payload :{userInput}
+        payload :{userInput, i}
     }
 }
