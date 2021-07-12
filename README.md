@@ -7,10 +7,13 @@ click the link below to check the repository : [Github Repository Link](https://
 ## Usage
 
   > cd todo-redux
+
   > npm i
   
   > npm start
+
   or
+  
   > yarn build
 
 ## Preview
