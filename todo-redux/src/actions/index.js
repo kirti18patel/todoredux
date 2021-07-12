@@ -1,3 +1,4 @@
+// get todo task which user wants to add
 export const addTodo = (userInput) =>{
     return{
         type: "ADDTODO",
@@ -5,6 +6,7 @@ export const addTodo = (userInput) =>{
     }
 }
 
+// get and return userinput which todo user wants to delete
 export const removeTodo = (i) =>{
     return{
         type: "REMOVETODO",
@@ -12,6 +14,7 @@ export const removeTodo = (i) =>{
     }
 }
 
+// take and return userinput and its index for the reference to modify todo task
 export const modifyTodo = (userInput, i) =>{
     return{
         type: "MODIFYTODO",
